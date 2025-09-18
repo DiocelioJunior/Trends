@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--Link Icons-->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!--Link CSS-->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/trends.css">
+
+<body>
+  <main>
+    <aside>
+      <!--Logo-->
+      <div class="logo">
+        <img src="/images/logo.png" alt="Logo" width="100">
+      </div>
+      <!--Menu lateral-->
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li title="Home"><a href="/"><span class="material-symbols-outlined">home</span></a></li>
+            <li title="Trends" class="active"><a href="/about"><span
+                  class="material-symbols-outlined">trending_up</span></a></li>
+
+          </ul>
+        </nav>
+    </aside>
+    <!--Conteudo da Pagina-->
+    <section class="content">
+      <div class="topbar">
+        <form id="news-search-form">
+          <input type="text" id="news-search" placeholder="Digite um termo..." required />
+          <button type="submit">🔍 Buscar</button>
+        </form>
+        <div id="news-results"></div>
+      </div>
+
+      <div class="card-container">
+
+        <div class="card-info">
+          <h1>Trends do Twitter (Brasil)</h1>
+          <p>Aqui estão as tendências atuais do Twitter no Brasil. Clique em "Ver Notícias" para buscar notícias
+            relacionadas a cada tendência.</p>
+          <div id="trend-container">Carregando...</div>
+        </div>
+
+        <div class="card-info">
+          <h1>🔥 Reddit (r/brasil)</h1>
+          <div id="reddit-container">Carregando...</div>
+        </div>
+
+        <div class="card-info">.</div>
+        <div class="card-info">.</div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="./js/trends.js"></script>
+</body>
+
+</html>

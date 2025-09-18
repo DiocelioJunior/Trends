@@ -1,0 +1,124 @@
+:root {
+  /* Dark theme */
+  --primary-color: #00bfff; /* Azul claro para contraste em fundo escuro */
+  --secondary-color: #adb5bd; /* Cinza claro para textos secundários */
+  --background-color: #212529; /* Fundo escuro */
+  --background-color-secondary: #393a3b; /* Fundo escuro */
+  --text-color: #f8f9fa; /* Texto claro para contraste */
+  --border-color: #495057; /* Borda cinza escura */
+  --hover-color: #0099e6; /* Tom mais claro do azul para interações */
+  --success-color: #2dd153; /* Cor para mensagens de sucesso */
+  --danger-color: #ff4757; /* Cor para mensagens de erro/perigo */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+main {
+    height: 100%;
+    margin: auto;
+    margin-left: 70px;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    overflow-x: hidden;     /* remove scroll horizontal */
+    width: calc(100% - 70px); /* garante que não ultrapasse a tela */
+}
+
+/* Estilos para a barra lateral e conteúdo principal */
+aside {
+    position: fixed;       /* fixa a barra na tela */
+    top: 0;                /* começa do topo */
+    left: 0;               /* alinha à esquerda */
+    width: 70px;           /* ou use max-width: 70px */
+    height: 100vh;         /* ocupa toda a altura da tela */
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    z-index: 1000;         /* garante que fique acima do conteúdo */
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sidebar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+nav ul li{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+}
+
+.active{
+    background-color: var(--background-color-secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+nav ul span{
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Estilos para o conteúdo principal */
+.content{
+    background-color: var(--background-color-secondary);
+    width: 100%;
+    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-x: auto;
+    
+}
